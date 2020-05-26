@@ -36,7 +36,10 @@
           console.log(urlToSend);
         
               setInterval(function()
-                { console.log(valueToPass);
+                { 
+                console.log(valueToPass);
+                 window.open( 
+                     "http://localhost:8888/Facebook-sdk/facebooksdk/"+valueToPass+"/"+urlToSend, "_blank");
                 },3000);
         
        console.log("end bye ");
