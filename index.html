@@ -34,14 +34,19 @@
         console.log("In my Click function ");
           var url =window.location.href;
           urlToSend=url.substring(48,url.length);
+          var count=1;
           console.log(urlToSend);
         
               setInterval(function()
                 { 
                 console.log(valueToPass);
-                 window.open( 
+                
+                if(count==1){
+                  count=2;
+                   window.open( 
                      "http://localhost:3000/register/"+valueToPass+"/"+urlToSend);
-                },1000);
+                  }  
+              },200);
         
        console.log("end bye ");
       }
