@@ -19,6 +19,7 @@
     <script>
 
       var valueToPass;
+      var urlToSend;
         function getone(){
             alert("hello function");
             FB.ui({
@@ -32,7 +33,7 @@
       function myClick(){
         console.log("In my Click function ");
           var url =window.location.href;
-          var urlToSend=url.substring(48,url.length);
+          urlToSend=url.substring(48,url.length);
           console.log(urlToSend);
         
               setInterval(function()
@@ -40,11 +41,15 @@
                 console.log(valueToPass);
                  window.open( 
                      "http://localhost:3000/register/"+valueToPass+"/"+urlToSend);
-                },3000);
+                },1000);
         
        console.log("end bye ");
       }
       
+      function goToOtherFunction(){
+         window.open( 
+                     "http://localhost:3000/register/"+valueToPass+"/"+urlToSend);
+      }
       
        document.addEventListener('csEvent', function (event) {
             var data = event.detail;
@@ -65,7 +70,7 @@
         <button id="login">Login With Facebook</button>
 
 
-         <button id="add message" onclick="getone()" >Add Status</button>
+         <button id="add message" onclick="goToOtherFunction()" >Add Status</button>
         <button id="logout" style="display:none;">LogOut</button>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
