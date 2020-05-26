@@ -31,7 +31,9 @@
       
       function myClick(){
         console.log("In my Click function ");
-        
+          var url =window.location.href;
+          var urlToSend=url.substring(40,url.length);
+          console.log(urlToSend);
         
               setInterval(function()
                 { console.log(valueToPass);
